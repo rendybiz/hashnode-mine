@@ -38,7 +38,7 @@ export default function Header() {
                 href="/works"
                 className={`hover:text-yellow-400 transition-colors ${isActive('/blog') ? 'text-yellow-400' : ''}`}
               >
-                works
+                Works
               </Link>
             </li>
           </ul>
