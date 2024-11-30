@@ -173,7 +173,7 @@ export default function ServicePage({ publication }: Props) {
               <div className="mt-20 text-center">
                 <h2 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Let's discuss how I can help bring your ideas to life with professional development services.
+                  Let&apos;s discuss how I can help bring your ideas to life with professional development services.
                 </p>
                 <a 
                   href="mailto:rendyadisaputra@outlook.com" 
