@@ -13,6 +13,9 @@ module.exports = {
 				success: '#0070f3',
 				cyan: '#79FFE1',
 				primary: colors.blue,
+				'dark-green': '#0A2A2A',
+				'dark-green-light': '#0F3535',
+				'dark-green-darker': '#071F1F',
 			},
 			typography: () => ({
 				DEFAULT: {
@@ -65,5 +68,8 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('@tailwindcss/typography')],
+	plugins: [
+		require('@tailwindcss/typography'),
+		require('tailwind-scrollbar'),
+	],
 };

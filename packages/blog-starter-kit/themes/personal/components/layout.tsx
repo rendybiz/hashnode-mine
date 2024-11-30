@@ -2,21 +2,23 @@ import { Analytics } from './analytics';
 import { Integrations } from './integrations';
 import { Meta } from './meta';
 import { Scripts } from './scripts';
+import Header from './Header';
 
 type Props = {
-	children: React.ReactNode;
+  children: React.ReactNode;
 };
 
 export const Layout = ({ children }: Props) => {
-	return (
-		<>
-			<Meta />
-			<Scripts />
-			<div className="min-h-screen bg-white dark:bg-neutral-950">
-				<main>{children}</main>
-			</div>
-			<Analytics />
-			<Integrations />
-		</>
-	);
+  return (
+    <>
+      <Meta />
+      <Scripts />
+      <div className="min-h-screen bg-[#0A2A2A]">
+        <Header />
+        <main className="pt-16">{children}</main>
+      </div>
+      <Analytics />
+      <Integrations />
+    </>
+  );
 };

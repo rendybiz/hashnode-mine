@@ -146,6 +146,7 @@ const { default: isURL } = require('validator/lib/isURL');
 	 */
 
 	Lexer.prototype.lex = function (src) {
+		if(!src) return this.token('');
 		src = src
 			.replace(/\r\n|\r/g, '\n')
 			.replace(/\t/g, '    ')

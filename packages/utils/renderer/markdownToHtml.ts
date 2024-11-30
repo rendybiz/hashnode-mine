@@ -94,6 +94,7 @@ const pipe =
 		fns.reduce((v, f) => f(v), x);
 
 export const markdownToHtml = (contentMarkdown: string) => {
+	console.log({contentMarkdown});
 	const content = pipe(
 		getHTMLFromMarkdown,
 		getSanitizedHTML,
