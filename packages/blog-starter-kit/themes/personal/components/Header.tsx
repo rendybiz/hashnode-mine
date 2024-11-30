@@ -43,10 +43,15 @@ export default function Header() {
             </li>
           </ul>
 
-          {/* Contact Button */}
-          <button className="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors">
-            Contact
-          </button>
+          {/* Download CV Button */}
+          <a 
+            href="https://drive.google.com/file/d/1PWCx9fbwaukj2Td9q4cME3i-bujLHvBx/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
+          >
+            Download my CV
+          </a>
 
           {/* Mobile Menu Button */}
           <button className="md:hidden">

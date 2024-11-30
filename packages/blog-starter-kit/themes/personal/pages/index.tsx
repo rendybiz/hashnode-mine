@@ -1,7 +1,7 @@
 import { Layout } from '../components/layout';
 import Head from 'next/head';
 import { Container } from '../components/container';
-import { Footer } from '../components/footer';
+import { Footer } from '../components/Footer-component';
 import HeroSection from '../components/HeroSection';
 import { ExperienceSection } from '../components/ExperienceSection';
 import { ServicesSection } from '../components/ServicesSection';
