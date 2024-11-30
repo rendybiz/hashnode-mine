@@ -10,7 +10,7 @@ type Testimonial = {
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
   <div className="bg-dark-green-light p-6 rounded-xl">
-    <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+    <p className="text-gray-300 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
     <div className="flex items-center gap-4">
       <div className="relative w-12 h-12 rounded-full overflow-hidden">
         <Image

@@ -8,7 +8,7 @@ export default function HeroSection() {
           {/* Left Column - Text Content */}
           <div>
             <div className="space-y-4">
-              <p className="text-sm">👋 Hi, I'm Rendy Adi Saputra</p>
+              <p className="text-sm">👋 Hi, I&apos;m Rendy Adi Saputra</p>
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 Tech Lead &<br />
                 <span className="text-yellow-400"> Senior Fullstack</span><br />
