@@ -87,25 +87,27 @@ const Post = ({ publication, post }: PostProps) => {
 
   return (
         <article>
-          <div className="relative py-16 lg:py-20">
+          <div className="relative py-8 md:py-16 lg:py-20 px-4 md:px-0">
               <div className="max-w-3xl mx-auto">
-               
-
                 {coverImageSrc && (
-                  <div className="relative aspect-[2/1] mb-12 rounded-xl overflow-hidden">
+                  <div className="relative aspect-[2/1] mb-8 md:mb-12 rounded-xl overflow-hidden">
                     <CoverImage title={post.title} src={coverImageSrc} priority={true} />
                   </div>
                 )}
 
-                <div className="prose prose-lg prose-invert max-w-none">
+                <div className="max-w-none px-4 md:px-6">
                   <MarkdownToHtml contentMarkdown={post.content.markdown} />
                 </div>
 
                 {tagsList.length > 0 && (
-                  <div className="mt-12">
-                    <h2 className="text-xl font-bold mb-4 text-white">Tags</h2>
-                    <ul className="flex flex-wrap gap-3">
-                      {tagsList}
+                  <div className="mt-8 md:mt-12">
+                    <h2 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">Tags</h2>
+                    <ul className="flex flex-wrap gap-2 md:gap-3 text-sm md:text-base">
+                      {tagsList.map((tag) => (
+                        <li key={tag.key} className="bg-dark-green-light px-3 py-1 rounded-full text-gray-300 hover:text-yellow-400 transition-colors">
+                          {tag.props.children}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 )}
@@ -118,12 +120,12 @@ const Post = ({ publication, post }: PostProps) => {
 const Page = ({ page }: PageProps) => {
   const title = page.title;
   return (
-    <>
+    <div>
       <Head>
         <title>{title}</title>
       </Head>
       <MarkdownToHtml contentMarkdown={page.content.markdown} />
-    </>
+    </div>
   );
 };
 
@@ -135,12 +137,11 @@ export default function PostOrPage(props: Props) {
   return (
     <AppProvider publication={publication} post={maybePost} page={maybePage}>
       <Layout>
-        <Container className="mx-auto flex max-w-3xl flex-col items-stretch gap-10 px-5 py-10">
-          <article className="flex flex-col items-start gap-10 pb-10">
+        <Container className="mx-auto flex max-w-3xl flex-col items-stretch gap-6 md:gap-10 px-4 md:px-5 py-6 md:py-10">
+          <article className="flex flex-col items-start gap-6 md:gap-10 pb-6 md:pb-10">
             {props.type === 'post' && <Post {...props} />}
             {props.type === 'page' && <Page {...props} />}
           </article>
-          {/* <Footer /> */}
         </Container>
       </Layout>
     </AppProvider>

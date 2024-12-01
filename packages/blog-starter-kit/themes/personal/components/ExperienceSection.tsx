@@ -55,10 +55,10 @@ export const ExperienceSection = () => {
         }
       `}</style>
       <div className="max-w-6xl mx-auto">
-        <div className="bg-yellow-400 rounded-[2rem] p-12">
+        <div className="bg-yellow-400 rounded-[2rem] p-6 md:p-12">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Left Column */}
-            <div className="scrollable-column space-y-12 max-h-[800px] overflow-y-auto pr-6">
+            <div className="scrollable-column space-y-12 max-h-[800px] overflow-y-auto md:pr-6">
               {leftExperiences.map((exp) => (
                 <ExperienceCard 
                   key={exp.id}
@@ -74,7 +74,7 @@ export const ExperienceSection = () => {
             <div className="hidden md:block w-px bg-black/10 absolute left-1/2 top-12 bottom-12"></div>
 
             {/* Right Column */}
-            <div className="scrollable-column space-y-12 max-h-[800px] overflow-y-auto pl-6">
+            <div className="scrollable-column space-y-12 max-h-[800px] overflow-y-auto md:pl-6">
               {rightExperiences.map((exp) => (
                 <ExperienceCard 
                   key={exp.id}

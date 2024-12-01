@@ -33,9 +33,9 @@ type Props = {
 };
 
 const BlogCard = ({ post }: { post: Post }) => (
-	<div>
+	<div className="w-full">
 		<Link href={`/${post.slug}`}>
-			<div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-xl">
+			<div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-xl w-full">
 				<Image
 					src={post.coverImage?.url || '/placeholder.jpg'}
 					alt={post.title}
@@ -44,10 +44,10 @@ const BlogCard = ({ post }: { post: Post }) => (
 					className="transition-transform duration-300 group-hover:scale-110"
 				/>
 			</div>
-			<h3 className="mb-2 text-xl font-bold text-white transition-colors group-hover:text-yellow-400">
+			<h3 className="mb-2 text-lg md:text-xl font-bold text-white transition-colors group-hover:text-yellow-400">
 				{post.title}
 			</h3>
-			<p className="line-clamp-2 text-gray-300">{post.brief}</p>
+			<p className="line-clamp-2 text-sm md:text-base text-gray-300">{post.brief}</p>
 		</Link>
 	</div>
 );
@@ -97,22 +97,20 @@ const BlogPage: React.FC<Props> = ({ publication }) => {
 					/>
 				</Head>
 				<main className="bg-dark-green min-h-screen text-white">
-					<section className="px-4 py-20 md:px-8 lg:px-16">
+					<section className="px-4 py-12 md:py-20 md:px-8 lg:px-16">
 						<div className="mx-auto max-w-7xl">
-							<div className="mb-16 text-center">
-								<h1 className="mb-4 text-4xl font-bold text-white md:text-5xl">
+							<div className="mb-8 md:mb-16 text-center">
+								<h1 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white">
 									My <span className="text-yellow-400">works</span>
 								</h1>
-								<p className="mx-auto max-w-2xl text-gray-300">
+								<p className="mx-auto max-w-2xl text-sm md:text-base text-gray-300 px-4">
 									Sharing my thoughts and experiences about web development, software architecture,
 									and tech leadership.
 								</p>
 							</div>
 
-							
-
 							{/* Blog Grid */}
-							<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+							<div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
 								{posts.map((post) => (
 									<BlogCard key={post?.id} post={post} />
 								))}

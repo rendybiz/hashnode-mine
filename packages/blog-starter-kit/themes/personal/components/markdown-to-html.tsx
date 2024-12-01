@@ -7,13 +7,12 @@ type Props = {
 };
 
 const _MarkdownToHtml = ({ contentMarkdown }: Props) => {
-	console.log({ contentMarkdown });
 	const content = markdownToHtml(contentMarkdown);
 	useEmbeds({ enabled: true });
 
 	return (
 		<div
-			className="hashnode-content-style text-white mx-auto w-full px-5 md:max-w-screen-md"
+			className="hashnode-content-style w-full max-w-none"
 			dangerouslySetInnerHTML={{ __html: content }}
 		/>
 	);
